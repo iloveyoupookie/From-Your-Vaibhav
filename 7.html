@@ -17,6 +17,8 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            position: relative;
+            overflow: hidden;
         }
         img {
             width: 80%;
@@ -25,19 +27,96 @@
             margin: 20px 0;
         }
         .btn {
-            padding: 20px 50px; /* Increased padding for larger button */
+            padding: 15px 30px; /* Medium-sized button */
             background-color: #dc3545;
             color: white;
-            font-size: 1.5em; /* Larger font size */
+            font-size: 1.2em;
             border: none;
             border-radius: 30px;
             cursor: pointer;
             text-decoration: none;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            margin-top: 20px; /* Spacing between images and button */
         }
         .btn:hover {
             background-color: #c82333;
         }
+
+        /* Star animation */
+        .star {
+            position: absolute;
+            background-color: #FFD700; /* Yellow color */
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Star shape */
+            opacity: 0;
+            animation: sparkle 1.5s infinite;
+        }
+
+        /* Random movement and size for stars */
+        @keyframes sparkle {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+
+        /* Add some stars */
+        .star:nth-child(1) {
+            width: 10px;
+            height: 10px;
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .star:nth-child(2) {
+            width: 12px;
+            height: 12px;
+            top: 30%;
+            left: 60%;
+            animation-delay: 0.3s;
+        }
+
+        .star:nth-child(3) {
+            width: 8px;
+            height: 8px;
+            top: 50%;
+            left: 40%;
+            animation-delay: 0.5s;
+        }
+
+        .star:nth-child(4) {
+            width: 14px;
+            height: 14px;
+            top: 80%;
+            left: 70%;
+            animation-delay: 0.7s;
+        }
+
+        .star:nth-child(5) {
+            width: 12px;
+            height: 12px;
+            top: 40%;
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+        .star:nth-child(6) {
+            width: 15px;
+            height: 15px;
+            top: 20%;
+            left: 50%;
+            animation-delay: 1.2s;
+        }
+
+        /* More stars can be added here by repeating the pattern */
     </style>
 </head>
 <body>
@@ -46,5 +125,56 @@
     <img src="7b.png" alt="Image 7B">
     <!-- Go Back button with href -->
     <a href="6.html" class="btn">Go Back</a>
+
+    <!-- Sparkling stars -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Add more stars as needed -->
 </body>
 </html>
