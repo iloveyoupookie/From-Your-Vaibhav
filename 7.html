@@ -117,9 +117,33 @@
         }
 
         /* More stars can be added here by repeating the pattern */
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #721c24;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: fadeIn 2s forwards; /* Adding fade-in animation */
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Title -->
+    <h1>Choose any coupon Any Time Pookie :)</h1>
+
     <!-- Image paths in the same folder -->
     <img src="7a.png" alt="Image 7A">
     <img src="7b.png" alt="Image 7B">
@@ -127,8 +151,6 @@
     <a href="6.html" class="btn">Go Back</a>
 
     <!-- Sparkling stars -->
-    <div class="star"></div>
-    <div class="star"></div>
     <div class="star"></div>
     <div class="star"></div>
     <div class="star"></div>
