@@ -27,18 +27,87 @@
         .button-group {
             margin-top: 20px;
         }
+        .poem {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #ff4d4d;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            line-height: 1.6;
+            white-space: pre-line;
+        }
+        .fade-in-word {
+            opacity: 0;
+            display: inline;
+            animation: fadeIn 1.5s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .audio-button {
+            background-color: #ff99cc;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        .audio-button:hover {
+            background-color: #ff6699;
+        }
     </style>
 </head>
 <body>
-    <audio autoplay loop>
+    <button class="audio-button" onclick="document.getElementById('bg-audio').play()">Padhne se pehle, Click here</button>
+    <audio id="bg-audio" loop>
         <source src="how_would_you_feel.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <img src="1.png" alt="Romantic Image" class="img-fluid" style="max-width: 100%; height: auto;">
+
+    <div class="poem" id="poem">
+        <!-- Poem content will be inserted here -->
+    </div>
+
+    <img src="1.png" alt="Romantic Image" class="img-fluid" style="max-width: 100%; height: auto; margin-top: 20px;">
 
     <div class="button-group">
         <a href="2.html" class="romantic-button me-3">YES</a>
         <a href="3.html" class="romantic-button">NO</a>
     </div>
+
+    <script>
+        const poemLines = [
+            'Three years ago, on this sweet day,',
+            'We found love in the most magical way.',
+            'Our first date, a spark so true,',
+            'Led me straight to a lifetime with you.',
+            '',
+            'Now here we stand, hand in hand,',
+            'With a love that’s deep, pure, and grand.',
+            'Each moment with you, a beautiful rhyme,',
+            'My heart beats for you, time after time.',
+            '',
+            'You\'re my joy, my sweetest delight,',
+            'My sunshine in the morning light.',
+            'Happy Valentine’s, my heart’s embrace,',
+            'Forever and always, my love, my grace.'
+        ];
+
+        const poemContainer = document.getElementById('poem');
+
+        poemLines.forEach((line, index) => {
+            const lineContainer = document.createElement('div');
+            line.split(' ').forEach((word, wordIndex) => {
+                const span = document.createElement('span');
+                span.textContent = word + ' ';
+                span.classList.add('fade-in-word');
+                span.style.animationDelay = `${(index * 2 + wordIndex * 0.4)}s`;
+                lineContainer.appendChild(span);
+            });
+            poemContainer.appendChild(lineContainer);
+        });
+    </script>
 </body>
 </html>
