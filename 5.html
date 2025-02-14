@@ -3,12 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect Page</title>
-    <meta http-equiv="refresh" content="10; url=7.html">
+    <title>Next Step</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffe6e6;
+            text-align: center;
+            padding: 20px;
+        }
+        .cute-text {
+            color: #ff4d4d;
+            font-size: 28px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin-top: 20px;
+        }
+        .images-container {
+            margin-top: 10px;
+        }
+        .hehe-image {
+            max-width: 45%;
+            height: auto;
+            margin: 5px;
+        }
+        .next-button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .next-button:hover {
+            background-color: #ff1a1a;
+        }
+    </style>
 </head>
 <body>
     <div class="container text-center">
         <img src="5.png" alt="Image" class="img-fluid">
     </div>
+    
+    <div class="cute-text">You see? This is us!</div>
+    
+    <div class="images-container">
+        <img src="hehe1.jpg" alt="Hehe Image 1" class="hehe-image">
+        <img src="hehe2.jpg" alt="Hehe Image 2" class="hehe-image">
+    </div>
+
+    <a href="7.html" class="next-button">Ab click here <3</a>
 </body>
 </html>
